@@ -1,0 +1,19 @@
+<ion-header mode=ios>
+  <ion-toolbar  mode=ios> <br>
+    <ion-searchbar (ionInput)="search(event)" mode=ios></ion-searchbar>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+ <ion-item *ngFor="let user of resultArr" onChange={this.handleChange()} >
+   <ion-avatar>
+     <img src="{{user.Picture}}" alt="" srcset="">
+   </ion-avatar>
+   <ion-label>
+     <ion-note style="font-weight: bold;">
+      {{user.Name}}
+    </ion-note>
+   </ion-label>
+ </ion-item>
+</ion-content>
+ 
